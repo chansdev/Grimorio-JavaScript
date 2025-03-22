@@ -10,6 +10,7 @@ Um exemplo de DOM é a parte de elements do menu inspecionar.
 ![image](https://github.com/user-attachments/assets/5c4b5d9e-7bf0-4013-ae37-7235e90868ad)
 
 ## Elementos Primitívos
+### O Que É?
 Os elementos primitívos são os elementos "principais" do JavaScript.
 ### Quais São?
 **String**: Representa um texto.
@@ -51,7 +52,8 @@ As variaveis são uma maneira de "armazenar" as coisas e usá-las de uma forma m
 ```
 
 ## Seleção de Elementos
-No JavaScript a seleção de elementos é muito importante, pois é assim que podemos modificar elementos do HTML.
+### O Que É?
+No JavaScript a seleção de elementos é muito importante, pois é assim que podemos adicionar, remover e modificar elementos do HTML.
 ### Como selecionar
 Existem várias maneiras de selecionar elementos no JavaScript. Essas são:
 **querySelector**: Seleciona o primeiro elemento que combinar com um seletor CSS específico.
@@ -83,4 +85,47 @@ Existem várias maneiras de selecionar elementos no JavaScript. Essas são:
 ```js
   const feedbacks = document.getElementsByName("textarea")
   cnosole.log(paragrafo) // [textarea.fbModelo1, img.fbModelo2]
+```
+
+## If, Else e Else If
+### O Que É?
+Os **If, Else e Else If** são maneiras de dizer que uma coisa só pode acontecer com uma condição específica.
+### Exemplo:
+_Usando para avisar no console se a variavel X é maior, menor ou igual a 3._
+```js
+  x = 4
+
+  if (x < 3) {
+    console.log("X é menor que 3!")
+  } else if (x > 3) {
+    console.log("X é maior que 3!")
+  } else {
+    console.log("X é igual a 3!")
+  }
+```
+
+## Switch Case
+### O Que É?:
+O **Switch Case** uma maneira de definir situações que acontecem de acordo com diversas opções.
+### Exemplo
+_Usando para usar que numero o usuário escolheu._
+```js
+  escolha = 3
+
+  switch (escolha) {
+    case 1:
+      console.log("O usuário escolheu o 1.");
+      break;
+    case 2:
+      console.log("O usuário escolheu o 2.");
+      break;
+    case 3:
+      console.log("O usuário escolheu o 3.");
+      break;
+    case 4:
+      console.log("O usuário escolheu o 4.");
+      break;
+    default:
+      console.log("O usuário não escolheu nada.")
+  }
 ```
