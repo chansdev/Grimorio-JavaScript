@@ -55,8 +55,8 @@ As variaveis são uma maneira de "armazenar" as coisas e usá-las de uma forma m
 ### O Que É?
 No JavaScript a seleção de elementos é muito importante, pois é assim que podemos adicionar, remover e modificar elementos do HTML.
 ### Como selecionar
-Existem várias maneiras de selecionar elementos no JavaScript. Essas são:
-**querySelector**: Seleciona o primeiro elemento que combinar com um seletor CSS específico.
+Existem várias maneiras de selecionar elementos no JavaScript. Essas são:  
+<br>**querySelector**: Seleciona o primeiro elemento que combinar com um seletor CSS específico.
 ```js
   const paragrafo = document.querySelector("p")
   cnosole.log(paragrafo) // <p>Esse é o prmeiro parágrafo do site.</p>
@@ -85,6 +85,11 @@ Existem várias maneiras de selecionar elementos no JavaScript. Essas são:
 ```js
   const feedbacks = document.getElementsByName("textarea")
   cnosole.log(paragrafo) // [textarea.fbModelo1, img.fbModelo2]
+```
+**getAttribute**: Seleciona um elemento por um atributo HTML específico.
+```js
+  const botaoAtivo = document.getAttribute('data-botao="ativo"')
+  cnosole.log(botaoAtivo) // <button data-botao="ativo">Clique Aqui</button>
 ```
 
 ## If, Else e Else If
