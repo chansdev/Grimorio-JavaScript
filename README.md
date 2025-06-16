@@ -137,6 +137,7 @@ _Usando para usar que numero o usuário escolheu._
 
 # Funções úteis do DOM
 Funções que talvez você precise para integrar o javaScript com CSS
+
 ## Prepend
 _Usado para adicionar um elemento a outro. Por exemplo, pegar um elemento e jogá-lo em outra área, ou para o início da área._
 ### Exemplo
@@ -158,7 +159,19 @@ Então, usando o pretend, podemos selecionar a div onde as fotos se encontram e 
     galeria.prepend(img);
   } // Diz que img é o alvo do evento e, com o prepend, move-o para o primeiro lugar na galeria
 
-  galeria.forEach((img) => {
+  galeriaImgs.forEach((img) => {
     img.addEventListener("click", moverImg)
   }) // Pega cada item da lista de imagens e aplica a função moverImg para cada item 
+```
+
+## MatchMedia
+_Usado para verificar o tamanho da tela usando um seletor mediaquery_
+### Exemplo
+Queremos verificar se a tela está maior que 1000px, então usamos o .matchMedia para descobrir no estilo CSS.
+```js
+  const tamanhoMin = matchMedia("(min-width: 1000px)").matches; // Cria um verificador de tamanho que retorna true ou false dependendo se o tamanho da tela condiz com o tamanho requisitado ou não
+
+  if (tamanhoMin) {
+    funcao()
+  } // Executa uma função se o tamanho condiz com o requisitado
 ```
