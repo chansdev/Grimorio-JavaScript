@@ -134,3 +134,31 @@ _Usando para usar que numero o usuário escolheu._
       console.log("O usuário não escolheu nada.")
   }
 ```
+
+# Funções úteis do DOM
+Funções que talvez você precise para integrar o javaScript com CSS
+## Prepend
+_Usado para adicionar um elemento a outro. Por exemplo, pegar um elemento e jogá-lo em outra área, ou para o início da área._
+### Exemplo
+Aqui temos uma galeria com 3 elementos, sendo o primeiro elemento o que fica em destaque.
+```html
+  <div class="galeria">
+    <img src="foto1.img" alt="Foto 1 da galeria">
+    <img src="foto2.img" alt="Foto 2 da galeria">
+    <img src="foto3.img" alt="Foto 3 da galeria">
+  </div>
+```
+Então, usando o pretend, podemos selecionar a div onde as fotos se encontram e as fotos em si. Com um addEventListener conseguimos fazer uma função que lança a foto clicada para o início da área.
+```js
+  const galeria = document.querySelector(".galeria"); // Seleciona a galeria
+  const galeriaImgs = document.querySelectorAll(".galeria img") // Seleciona todas as imagens dentro da galeria e coloca em uma nodeList
+
+  function moverImg(event) {
+    let img = event.target;
+    galeria.prepend(img);
+  } // Diz que img é o alvo do evento e, com o prepend, move-o para o primeiro lugar na galeria
+
+  galeria.forEach((img) => {
+    img.addEventListener("click", moverImg)
+  }) // Pega cada item da lista de imagens e aplica a função moverImg para cada item 
+```
